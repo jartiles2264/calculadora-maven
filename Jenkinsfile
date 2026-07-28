@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                     sh '''
-                        mvn sonar:sonar \
+                        mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
                         -Dsonar.projectKey=calculadora-maven \
                         -Dsonar.projectName="Calculadora Maven" \
                         -Dsonar.sources=src/main/java \
